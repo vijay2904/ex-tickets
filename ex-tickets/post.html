@@ -1,0 +1,173 @@
+t<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<style type="text/css">
+    body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: mediumspringgreen;
+    background-image: url(img/website-design-background.png);
+   
+    
+}
+.container{
+    background-color: #fff;
+    width: 850px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 1px 50px rgba(0,0,0,.2);
+}
+.container::before{
+    content: '';
+    width:350px;
+    height: 500px;
+    background-color:#fb007d;
+    position: absolute;
+    
+    
+}
+.icon img{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 100px;
+}
+
+.icon p{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    color: #fff;
+}
+.social{
+    position:absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+}
+.social img{
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    margin: 0 2px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+}
+.social img:hover{
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.forms{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    overflow: hidden;
+    
+}
+.forms input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 0 0 0 35px;
+    border: 1px solid rgba(0,0,0,0);
+    border-bottom-color:#fb007d;
+    background:transparent;
+}
+.forms img{
+    width: 20px;
+    position: absolute;
+    margin-top: 15px;
+    
+    
+}
+.forms input[type="checkbox"]{
+    width: 20px;
+    margin: 16px 0 0 2px;
+    padding: 0;
+    border: 2px solid #5bb9ec;
+    width: 15px;
+    height: 15px;
+    -webkit-appearance:none;
+    background-color: #fff;
+    outline: none;
+    
+}
+input:checked[type="checkbox"]{
+    background-color: #fb007d;
+    border: none;
+   
+}
+.agree{
+    float: right;
+    margin-right: 125px;
+    font-size: 15px;
+    
+}
+.forms input[type="submit"]{
+    width: 100%;
+    border: none;
+    background-color: #fb007d;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+ }
+</style>
+<body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="icon">
+            <img src="img/mac.PNG" alt="">
+            <p>Login using existing profile</p>
+        </div>
+        <div class="social">
+            <img src="img/fb.png" alt="">
+            <img src="img/linkedIn.png" alt="">
+            <img src="img/twitter.png"alt="">
+        </div>
+        
+        <div class="forms">
+           <img src="img/user.png" alt="">
+            <input type="text" placeholder="Name" name="name">
+            <img src="img/email-5-xxl.png" alt="">
+            <input type="email" placeholder="Email id" name="email">
+            <img src="img/key-xxl.png" alt="">
+            <input type="text" placeholder="Name of the movie" name="movie">
+             <img src="img/key-xxl.png" alt="">
+             <input type="number" placeholder="No.of ticket(s)" name="number">
+             <p>Genre:</p>
+             <select name="genre">
+                 <option value="movies">Movie</option>
+                 <option value="events">Event</option>
+                 <option value="concerts">Concert</option>
+                 <option value="sports">Sports</option>
+             </select>
+            <input type="text" placeholder="phone number(paytm/gpay)" name="phone">
+            <img src="img/phone.jpg" alt="">
+            <input type="date" placeholder="" name="date">
+
+            <input type="checkbox" name="check">
+            <p class="agree">I agree Terms and Conditions</p>
+            <br>
+            <p>Insert screen shot of your ticket(s)</p>
+            <input type="file" name="file">
+            <input type="submit" value="Post" name="submit">
+        </div> 
+    </div>
+    </form>
+</body>
+</html>
